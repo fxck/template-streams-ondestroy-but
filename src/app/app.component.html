@@ -1,1 +1,21 @@
+<div>
+
+  <a
+    [routerLink]="[ '/' ]"
+    [routerLinkActiveOptions]="{ exact: true }"
+    routerLinkActive="router-link-active">
+    Page One
+  </a>
+
+  <a
+    [routerLink]="[ '/two' ]"
+    [routerLinkActiveOptions]="{ exact: true }"
+    routerLinkActive="router-link-active">
+    Page two
+  </a>
+
+</div>
+
+<hr />
+
 <router-outlet></router-outlet>

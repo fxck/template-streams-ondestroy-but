@@ -1,21 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { FooComponent } from './foo.component';
-import { BarComponent } from './bar.component';
+import { OneComponent } from './routes/one.component';
+import { TwoComponent } from './routes/two.component';
+
+export const routes = [
+  {
+    path: '',
+    component: OneComponent,
+  },
+  {
+    path: 'two',
+    component: TwoComponent,
+  }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooComponent,
-    BarComponent
+    OneComponent,
+    TwoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
